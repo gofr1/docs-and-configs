@@ -5,7 +5,7 @@ Displayed Name
 
 ## Rename the displayed name (for example, shown by gitweb):
 
-Edit .git/description to contain the repository's name.
+Edit `.git/description` to contain the repository's name.
 Save the file.
 
 ## Repository Directory
