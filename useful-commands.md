@@ -913,3 +913,31 @@ to run it
 add this string to ~/.bashrc
 
     export HISTCONTROL="ignoreboth:erasedups" 
+
+# Get previous command & arguments
+
+## this will execute last command with sudo
+
+    sudo !!
+
+## gets the first element of the previous command line argument
+
+    rm -rf dir
+    cd !$
+    
+will give you "-rf"
+
+## gets the last element of the previous command line argument
+
+    rm -rf dir
+    cd !$
+
+will give you "dir"
+
+## the n'th word from the previous command line
+
+    tar xf some-file
+    echo !:1 
+
+will give you "xf"
+
