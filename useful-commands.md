@@ -941,3 +941,19 @@ will give you "dir"
 
 will give you "xf"
 
+# Push the process to the background 
+
+add "&" at the end of your command
+
+## list all commands that are currently running in background
+
+    jobs
+
+## bring job from background
+
+    fg %1
+
+## push job to the background 
+
+    bg %1
+
