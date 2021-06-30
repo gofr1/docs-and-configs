@@ -1,0 +1,7 @@
+[user]
+pinned=/usr/share/applications/firefox.desktop;/usr/share/applications/transmission-gtk.desktop;/usr/share/applications/teams.desktop;/usr/share/applications/xfce4-terminal.desktop;/usr/share/applications/thunderbird.desktop;/usr/share/applications/virtualbox.desktop;/usr/share/applications/geany.desktop;/var/lib/snapd/desktop/applications/code_code-url-handler.desktop;/usr/share/applications/gimp.desktop;/usr/share/applications/brave-browser.desktop;/usr/share/applications/libreoffice7.0-writer.desktop;/usr/share/applications/libreoffice7.0-calc.desktop;/usr/local/share/applications/thunar.desktop;/usr/share/applications/steam.desktop;
+indicatorStyle=0
+keyComboActive=false
+forceIconSize=false
+noWindowsListIfSingle=true
+indicatorOrientation=0
