@@ -957,3 +957,31 @@ add "&" at the end of your command
 
     bg %1
 
+# Samba network share
+
+install samba
+
+    sudo apt install samba
+
+set password for samba user
+
+    sudo smbpasswd -a username
+
+open samba config file
+
+    sudo nano /etc/samba/smb.conf
+
+and add info about directory you want to share
+
+    [dirname]
+    path = /home/username/dirname
+    valid users = username
+    read only = yes
+
+Or instead of `valid users` use `guest`
+
+    guest ok = yes
+
+then restart samba for changes to take an effect
+
+    sudo service smbd restart
