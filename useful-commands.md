@@ -867,20 +867,20 @@ print all with humanreadable size with level 1 only
 
 # Date & time control
 
-    imedatectl
+    timedatectl
 
 or `no` to enable/disable auto update
 
-    imedatectl set-ntp yes
+    timedatectl set-ntp yes
 
 or 20:20:20 to set specific date/time
 
-    imedatectl set-time 2021-06-14
+    timedatectl set-time 2021-06-14
 
 set timezone
 
-    imedatectl set-timezone Region/Location
-    imedatectl list-timezones 
+    timedatectl set-timezone Region/Location
+    timedatectl list-timezones 
 
 # How to Change the Start Order of Processes in Linux
 
