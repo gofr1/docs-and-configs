@@ -124,20 +124,35 @@ delete
     sudo dpkg -P package-name
 
 # clean/update/upgrade:
+
     sudo apt-get clean && sudo apt-get update && sudo apt-get upgrade
     sudo apt autoremove
     sudo apt-get autoclean
     sudo apt --fix-broken install
 
 # ppa repositories
+
 ## with apt
+
     sudo apt-add-repository ppa:<ppa to add>
     sudo add-apt-repository -r ppa:<ppa to remove>
+    
 ## Manually
-    /etc/apt/sources.list.d
+
+Check files here:
+
+    /etc/apt/sources.list.d/
+
+And this file:
+
     /etc/apt/sources.list
 
+Then:
+
+    sudo apt update
+
 # Upgrade/update ubuntu version:
+
 check new version availability
 
     do-release-upgrade -c 
@@ -184,9 +199,11 @@ Distro
 processor
 
     cat /proc/cpuinfo
+    
 ip address & ethernet adapters
 
     ip a
+    
 all info
 
     lshw
