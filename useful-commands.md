@@ -1002,3 +1002,11 @@ Or instead of `valid users` use `guest`
 then restart samba for changes to take an effect
 
     sudo service smbd restart
+
+# nano show line numbers
+
+    nano ~/.nanorc
+    
+add this line
+
+    set linenumbers
