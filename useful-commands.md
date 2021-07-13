@@ -1010,3 +1010,5 @@ then restart samba for changes to take an effect
 add this line
 
     set linenumbers
+
+also consider uncommenting this line in `/etc/nanorc`
