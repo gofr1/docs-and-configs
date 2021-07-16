@@ -115,6 +115,10 @@ change in `LC_TIME` `first_weekday 1` to `first_weekday 2`
     sudo dpkg -i ./path/to/file.deb --auto-deconfigure
     sudo apt --fix-broken install
 
+list all
+    
+    dpkg -l
+
 show info
 
     dpkg -f ./path/to/file.deb
@@ -122,6 +126,7 @@ show info
 delete
 
     sudo dpkg -P package-name
+    sudo dpkg -r package-name
 
 # clean/update/upgrade:
 
