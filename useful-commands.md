@@ -484,7 +484,7 @@ in 2019
 
 # Docker:
 
-Check state
+check state
 
     systemctl show --property ActiveState docker
     systemctl show --property ActiveState containerd
@@ -496,8 +496,13 @@ check available containers
 
     sudo docker ps -a
 
-docker start/stop imagename
-docker run image_that_was_pulled/downloaded
+start/stop containers
+
+    docker start/stop imagename
+
+run a command in a new container
+
+    docker run imagename
 
 to enter a container through terminal
 
