@@ -850,6 +850,12 @@ configs
 `:load playlist.pls` - will load playlist.pls   
 `:colorscheme xterm-white` (see /usr/share/cmus/*.theme)  
 
+## update library
+
+`:clear` - clear library
+`:add ~/Music` - add directory
+`:update-cache -f` - update cache just in case
+
 # desktop & autostart
 
 files that whisker use to build menu
