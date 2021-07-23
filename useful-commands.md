@@ -11,7 +11,6 @@
 # Check system:
 
     sudo dmidecode --type memory
-    nvidia-smi -q
 
 # PHP
 
@@ -1028,3 +1027,28 @@ add this line
     set linenumbers
 
 also consider uncommenting this line in `/etc/nanorc`
+
+# nvidia drivers
+
+## NVIDIA System Management Interface
+
+    nvidia-smi
+    nvidia-smi -q
+
+## check available for installation nvidia drivers
+
+    apt search nvidia-driver
+
+## check installed nvidia drivers
+
+    sudo apt list | grep nvidia
+    sudo ubuntu-drivers devices
+
+## which loadable kernel modules are currently loaded
+
+    lsmod | grep nvidia
+
+## automatically install drivers
+    
+    sudo ubuntu-drivers install nvidia-driver-470
+
