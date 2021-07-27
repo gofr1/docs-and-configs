@@ -284,6 +284,12 @@ to install one more instance
 
     mogrify -resize 320x file-name
 
+## crop file
+
+    mogrify -crop 1920x1080 file-name
+
+if the file is big it will cut 1920x1080 ain one file and put other stuff in second file.
+
 # To get file info
 
     identify file
