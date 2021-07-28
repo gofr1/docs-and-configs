@@ -1,0 +1,85 @@
+/configver 2
+/panels [<1>]
+/panels/dark-mode false
+/panels/panel-1/autohide-behavior uint32 0
+/panels/panel-1/background-rgba [<0.0>, <0.0>, <0.0>, <1.0>]
+/panels/panel-1/background-style uint32 0
+/panels/panel-1/disable-struts false
+/panels/panel-1/enter-opacity uint32 100
+/panels/panel-1/icon-size uint32 0
+/panels/panel-1/leave-opacity uint32 100
+/panels/panel-1/length uint32 100
+/panels/panel-1/length-adjust false
+/panels/panel-1/mode uint32 0
+/panels/panel-1/nrows uint32 1
+/panels/panel-1/plugin-ids [<17>, <2>, <5>, <3>, <4>, <6>, <29>, <31>, <7>, <12>, <1>, <8>]
+/panels/panel-1/position 'p=12;x=947;y=1055'
+/panels/panel-1/position-locked true
+/panels/panel-1/size uint32 30
+/panels/panel-1/span-monitors false
+/plugins/plugin-1 'thunar-tpa'
+/plugins/plugin-12 'clock'
+/plugins/plugin-12/digital-format '%a %_d %b, %R'
+/plugins/plugin-12/fuzziness uint32 0
+/plugins/plugin-12/mode uint32 2
+/plugins/plugin-12/tooltip-format '%Y-%m-%d'
+/plugins/plugin-17 'whiskermenu'
+/plugins/plugin-2 'separator'
+/plugins/plugin-2/expand false
+/plugins/plugin-2/style uint32 0
+/plugins/plugin-29 'pulseaudio'
+/plugins/plugin-29/enable-keyboard-shortcuts true
+/plugins/plugin-29/enable-mpris true
+/plugins/plugin-29/enable-multimedia-keys false
+/plugins/plugin-29/enable-wnck false
+/plugins/plugin-29/mpris-players 'chromium.instance12363;chromium.instance12932;chromium.instance19846;chromium.instance2663;chromium.instance2811;chromium.instance2900;chromium.instance2956;chromium.instance3071;chromium.instance3111;chromium.instance3116;chromium.instance3884;chromium.instance4186;chromium.instance4400;chromium.instance5284;chromium.instance5801;chromium.instance6677;chromium.instance794824;chromium.instance934364;firefox.instance100113;firefox.instance10292;firefox.instance12288;firefox.instance12622;firefox.instance141813;firefox.instance15538;firefox.instance22219;firefox.instance2380;firefox.instance2387;firefox.instance2395;firefox.instance2398;firefox.instance2404;firefox.instance2405;firefox.instance2411;firefox.instance2412;firefox.instance2421;firefox.instance2422;firefox.instance2423;firefox.instance2427;firefox.instance2436;firefox.instance2437;firefox.instance2439;firefox.instance2440;firefox.instance2446;firefox.instance2451;firefox.instance2454;firefox.instance2458;firefox.instance2459;firefox.instance2463;firefox.instance2478;firefox.instance2481;firefox.instance2482;firefox.instance2487;firefox.instance2492;firefox.instance2493;firefox.instance2497;firefox.instance2498;firefox.instance2500;firefox.instance2504;firefox.instance2505;firefox.instance2506;firefox.instance2511;firefox.instance2515;firefox.instance2523;firefox.instance2525;firefox.instance2526;firefox.instance2528;firefox.instance2531;firefox.instance2537;firefox.instance2539;firefox.instance2540;firefox.instance2542;firefox.instance2544;firefox.instance2557;firefox.instance2560;firefox.instance25640;firefox.instance2574;firefox.instance2575;firefox.instance2577;firefox.instance2581;firefox.instance2584;firefox.instance2594;firefox.instance2595;firefox.instance2599;firefox.instance2613;firefox.instance2619;firefox.instance2627;firefox.instance2629;firefox.instance2635;firefox.instance2636;firefox.instance2651;firefox.instance2655;firefox.instance2660;firefox.instance2664;firefox.instance2672;firefox.instance2677;firefox.instance2686;firefox.instance2699;firefox.instance2711;firefox.instance2721;firefox.instance2724;firefox.instance2727;firefox.instance2731;firefox.instance2735;firefox.instance2737;firefox.instance2743;firefox.instance2744;firefox.instance2750;firefox.instance2776;firefox.instance2777;firefox.instance2778;firefox.instance2784;firefox.instance2815;firefox.instance2816;firefox.instance2817;firefox.instance2854;firefox.instance2857;firefox.instance2858;firefox.instance2892;firefox.instance2898;firefox.instance2907;firefox.instance2924;firefox.instance2949;firefox.instance2977;firefox.instance2978;firefox.instance2981;firefox.instance2984;firefox.instance2987;firefox.instance3008;firefox.instance303040;firefox.instance3062;firefox.instance3136;firefox.instance3292;firefox.instance3306;firefox.instance3309;firefox.instance3339;firefox.instance3372;firefox.instance3419;firefox.instance3453;firefox.instance3456;firefox.instance34887;firefox.instance3497;firefox.instance3507;firefox.instance3537;firefox.instance3576;firefox.instance3593;firefox.instance35954;firefox.instance3661;firefox.instance3680;firefox.instance3713;firefox.instance3762;firefox.instance3791;firefox.instance3793;firefox.instance37955;firefox.instance3864;firefox.instance39057;firefox.instance4046;firefox.instance4145;firefox.instance4232;firefox.instance4293;firefox.instance4471;firefox.instance447803;firefox.instance4508;firefox.instance4519;firefox.instance4606;firefox.instance4610;firefox.instance4624;firefox.instance4706;firefox.instance4811;firefox.instance4911;firefox.instance5044;firefox.instance5120;firefox.instance5193;firefox.instance5376;firefox.instance54742;firefox.instance5510;firefox.instance5566;firefox.instance5841;firefox.instance609252;firefox.instance61806;firefox.instance6522;firefox.instance68492;firefox.instance69370;firefox.instance70670;firefox.instance72503;firefox.instance7460;firefox.instance74700;firefox.instance75149;firefox.instance7538;firefox.instance77369;firefox.instance7782;firefox.instance8402;firefox.instance9172;firefox.instance98406;vlc;vlc.instance12012;vlc.instance22063'
+/plugins/plugin-29/show-notifications true
+/plugins/plugin-3 'separator'
+/plugins/plugin-3/expand true
+/plugins/plugin-3/style uint32 0
+/plugins/plugin-31 'xkb'
+/plugins/plugin-31/display-name uint32 0
+/plugins/plugin-31/display-scale uint32 71
+/plugins/plugin-31/display-tooltip-icon false
+/plugins/plugin-31/display-type uint32 2
+/plugins/plugin-4 'pager'
+/plugins/plugin-4/miniature-view false
+/plugins/plugin-4/numbering false
+/plugins/plugin-4/rows uint32 1
+/plugins/plugin-4/workspace-scrolling true
+/plugins/plugin-5 'docklike'
+/plugins/plugin-6 'systray'
+/plugins/plugin-6/hidden-legacy-items @av []
+/plugins/plugin-6/hide-new-items false
+/plugins/plugin-6/icon-size 0
+/plugins/plugin-6/known-legacy-items [<'slack'>, <'skypeforlinux'>, <'ibus panel'>, <'remmina'>, <'gpick'>, <'transmission'>, <'zoom'>, <'telegramdesktop'>, <'steam'>, <'xfce4-power-manager'>, <'thunar'>, <'vlc'>, <'teams'>, <'update-notifier'>, <'blueman-tray'>, <'networkmanager applet'>, <'bluetooth enabled'>, <'caffeine-indicator'>, <'network'>]
+/plugins/plugin-6/single-row true
+/plugins/plugin-6/square-icons true
+/plugins/plugin-7 'weather'
+/plugins/plugin-7/cache-max-age 172800
+/plugins/plugin-7/forecast/days 5
+/plugins/plugin-7/forecast/layout 1
+/plugins/plugin-7/labels/label0 3
+/plugins/plugin-7/location/latitude '59.909000'
+/plugins/plugin-7/location/longitude '30.295000'
+/plugins/plugin-7/location/name 'St Petersburg, Russian Federation'
+/plugins/plugin-7/msl 7
+/plugins/plugin-7/offset '+03:00'
+/plugins/plugin-7/power-saving true
+/plugins/plugin-7/round true
+/plugins/plugin-7/scrollbox/animate true
+/plugins/plugin-7/scrollbox/color 'rgba(0,0,0,0)'
+/plugins/plugin-7/scrollbox/lines 1
+/plugins/plugin-7/scrollbox/show true
+/plugins/plugin-7/scrollbox/use-color false
+/plugins/plugin-7/single-row true
+/plugins/plugin-7/theme-dir '/usr/local/share/xfce4/weather/icons/simplistic'
+/plugins/plugin-7/timezone 'Europe/Moscow'
+/plugins/plugin-7/tooltip-style 0
+/plugins/plugin-7/units/altitude 0
+/plugins/plugin-7/units/apparent-temperature 0
+/plugins/plugin-7/units/precipitation 0
+/plugins/plugin-7/units/pressure 3
+/plugins/plugin-7/units/temperature 0
+/plugins/plugin-7/units/windspeed 0
+/plugins/plugin-8 'showdesktop'

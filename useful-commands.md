@@ -1058,3 +1058,8 @@ also consider uncommenting this line in `/etc/nanorc`
     
     sudo ubuntu-drivers install nvidia-driver-470
 
+# matrix in terminal
+    
+    sudo apt install cmatrix
+    cmatrix
+
