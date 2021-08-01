@@ -61,3 +61,10 @@ On your current branch:
     git reset --hard HEAD~1
 
 Switch to another branch and commit there
+
+# Changing Git Remote to SSH
+
+    git remote set-url origin git@github.com:User/project-name.git
+    git remote -v 
+
+
