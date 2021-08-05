@@ -637,6 +637,11 @@ mount/unmount
 # Change text in a file:
 
     sudo sed -i 's/search/replace/g' /usr/share/applications/defaults.list 
+    sudo sed -i 's/some\/path\/in\/file\/temp\///g' path/to/file 
+
+Replace \ with /:
+
+    echo 'C:\foo\bar' | sed 's/\\/\//g'
 
 # Check open ports:
 
