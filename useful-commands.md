@@ -1,40 +1,36 @@
-# Create a directory:
+# directories
 
-    mkdir <dir name>
+## create a directory
 
-# Memory usage:
+    mkdir dir-name
 
-    free -mh
-    top
-    htop 
+## current directory
 
-# Check system:
+    pwd
 
-    sudo dmidecode --type memory
+## directory structure
 
-# PHP
+    ls -lah /dir
+
+The first letter represents:  
+
+`-` file  
+`d` directory  
+`c` charecter (tty)  
+`b` block (some device)  
+`l` link  
+`p` pipes  
+`s` socket (p and s used for process to communicate w/ each other
+
+# php
 
     php -v
     cd to directory where files are
     php -S localhost:9000
 
-# Search folder and subfolders for some_text in files
+# service management
 
-    grep -rw . -e 'some_text'
-
-# Zip to archive files
-
-    zip name_of_archive * 
-    add -e for password protection
-
-# Gzip GZ
-
-    gzip -dr ~/file.gz
-    gzip -c filename > filename.gz or gzip -k filename
-    gzip -r directory
-
-# RDBMS or services in general
-## (mssql-server, postgresql.service, mongod)
+## dbms: mssql-server, postgresql.service, mongod
 
     sudo systemctl stop service-name
     sudo systemctl disable service-name
@@ -45,12 +41,12 @@
     
     sudo /etc/init.d/service-name restart
 
-## To find out all services that have been run at startup:
+## find out all services that have been run at startup:
 
     systemctl list-units --type service
     systemctl is-active service-name
 
-## Show list of dependencies:
+## show list of dependencies:
 
     systemctl list-dependencies --before timers.target
     systemctl list-dependencies --after timers.target
@@ -59,47 +55,42 @@
 
     journalctl -u mssql-server | tail -30
 
-# Edit files:
+# edit files
 
     sudo nano Directory/file
 
-# Basic copy:
+# basic copy
 
     sudo cp Directory/file /Destination/Directory/
 
-# Find files/folders:
+# find files/folders:
 
-    udo locate what-to-search
+    sudo locate what-to-search
 
-# IP and network:
-
-    ifconfig
-
-## Check open ports and services:
-
-    netstat -na
-    netstat -nlp
-
-# Show data from file:
+# show data from file
 
     cat /path/to/file
 
-## show last rows from file:
+## show last rows from file
 
     tail /path/to/file
 
-## show with scrolling:
+## show first rows from file
+
+    head /path/to/file
+    
+## show with scrolling
 
     less /path/to/file
 
-# working with locale:
+# working with locale
 
     locale -a
     sudo locale-gen "en_US.UTF-8"
     sudo dpkg-reconfigure locales
     sudo nano /etc/default/locale
 
-## Set weekday (or other parameter)
+## set first weekday (or other parameters)
 
     sudo nano /usr/share/i18n/locales/en_US
 
@@ -107,22 +98,22 @@ change in `LC_TIME` `first_weekday 1` to `first_weekday 2`
 
     sudo locale-gen
 
-# Install/unpack deb package:
+# install/unpack deb package:
 
     sudo apt install ./path/to/file.deb
     sudo dpkg -i ./path/to/file.deb
     sudo dpkg -i ./path/to/file.deb --auto-deconfigure
     sudo apt --fix-broken install
 
-list all
+## list all
     
     dpkg -l
 
-show info
+## show info
 
     dpkg -f ./path/to/file.deb
 
-delete
+## delete
 
     sudo dpkg -P package-name
     sudo dpkg -r package-name
@@ -141,101 +132,114 @@ delete
     sudo apt-add-repository ppa:<ppa to add>
     sudo add-apt-repository -r ppa:<ppa to remove>
     
-## Manually
+## manually
 
-Check files here:
+check files here:
 
     /etc/apt/sources.list.d/
 
-And this file:
+and this file:
 
     /etc/apt/sources.list
 
-Then:
+then:
 
     sudo apt update
 
-# Upgrade/update ubuntu version:
+# upgrade/update ubuntu version:
 
-check new version availability
+## check new version availability
 
     do-release-upgrade -c 
 
-perform upgrade
+## perform upgrade
 
     sudo do-release-upgrade 
 
-check what type of distribution you have/want lts|normal etc
+## check what type of distribution you have/want lts|normal etc
 
     sudo nano /etc/update-manager/release-upgrades
 
-# update private keys:
+# update private keys
 
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys HASHOFTHEKEY
 
-# turn-off computer:
+# turn-off computer
 
     upower -d
     shutdown
 
-# Remove software:
+# remove software
 
     sudo apt purge software
     sudo apt-get purge software
     sudo apt remove software
 
-# Check linux version and hardware:
+# check linux version and hardware:
 
-kernel
+## kernel
 
     uname -a
 
-memory
+## memory usage
 
     free -mh
+    top
+    htop 
 
-Distro
+## distro
 
     cat /etc/*-release 
     lsb_release -a 
     cat /etc/issue
 
-processor
+## processor
 
     cat /proc/cpuinfo
     
-ip address & ethernet adapters
+## ip address & ethernet adapters
 
     ip a
+    ifconfig
     
-all info
+## check open ports:
+
+    sudo netstat -antup | grep <port>
+    ss -ltn
+
+### allow connection on particular port
+
+    sudo ufw allow <port>/tcp
+
+### flush dns
+
+    sudo systemd-resolve --flush-caches
+    sudo /etc/init.d/dns-clean restart
+    
+## all info
 
     lshw
 
-# Check video:
+## check video
 
     glxinfo|egrep "OpenGL vendor|OpenGL renderer"
 
-# To change machine name:
+## list usb devices
+
+    lsusb
+    
+## get system hardware information
+
+    sudo dmidecode
+    sudo dmidecode --type memory
+    sudo dmidecode --type system
+
+# change machine name (or hostname)
 
     sudo nano /etc/hosts
     sudo nano /etc/hostname
 
-# To make ls command always use colors:
-
-    alias "ls=ls --color=auto"
-
-Also alias command can be used in another ways
-
-# Current directory
-
-    pwd
-
-# Add some text to every string in one file and write it to another one:
-
-    awk '{print "Random text "$0}' foo.txt >> foo1.txt
-
-# Python:
+# python
 
 at first download from off-site
 
@@ -254,13 +258,13 @@ to install one more instance
 
     sudo make altinstall 
 
-## to install pygame you need some dependencies:
+## install pygame you need some dependencies
 
     sudo apt install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsdl1.2-dev libsmpeg-dev python-numpy subversion libportmidi-dev ffmpeg libswscale-dev libavformat-dev libavcodec-dev
     sudo pip3 install pygame
     sudo pip3 install superwires
 
-# To change image size right in terminal:
+# change image size right in terminal:
 
     sudo apt-get install imagemagick
 
@@ -288,63 +292,58 @@ to install one more instance
 
     mogrify -crop 1920x1080 file-name
 
-if the file is big it will cut 1920x1080 ain one file and put other stuff in second file.
+if the file is big it will cut 1920x1080 in one file and put other stuff in second file
 
-# To get file info
+# file info 
+
+## get file info
 
     identify file
     identify file.png | awk '{print $1,$2}'
 
-# Search for commands:
+## show type of file
+
+    file <filename>
+
+## shows detailed info about file
+
+    stat <filename>
+
+# rtfm
+
+## search for commands
 
     apropos .
     apropos files
     apropos "remove files"
 
-# Search for description of particular command:
+## search for description of particular command
 
     whatis rm
 
-# Show man-page
+## show man-page
 
     man <command>
 
-## Navigation:
+### navigation
 
-f b up down  
-/SearchString  
+`f` `b` - up down  
+`/SearchString` - to search 
 
-## Spec section number:
+### spec section number:
 
 man 7 man goes to 7 section of man manual
 
-# Shows the path where command is located:
+## show the path where command is located:
 
     which <command>
 
-# Directory structure:
+# search directory and subdirectories for some-text in files
 
-    ls -lah /dir
+    grep -rw /dir-name -e 'some-text'
 
-The first letter represents:  
+# super user 
 
-`-` file  
-`d` directory  
-`c` charecter (tty)  
-`b` block (some device)  
-`l` link  
-`p` pipes  
-`s` socket (p and s used for process to communicate w/ each other  
-
-# Shows type of file:
-
-    file <filename>
-
-# Shows detailed info about file:
-
-    stat <filename>
-
-# Super user:
 ## starts sudo session w/o password prompt every few minutes
 
     sudo -s 
@@ -354,7 +353,7 @@ The first letter represents:
     sudo -k 
     exit
 
-# Grep examples:
+# grep examples
 
     grep "Trick" tricks.py --colour=always -n
 
@@ -363,15 +362,20 @@ The first letter represents:
 `n` - row numbers  
 `E` - regexp  
 
-# Working with csv (or text):
+# working with csv (or text):
 
     awk -F ';' '{print $1 '\t' $3}' sample.csv | sort -t
 
-will remove duplicated
+## will remove duplicated
 
     sort -u file.ext
+    
+## use sed to replace charecters in the string (replaces xy with 1)
 
-# Archive:
+    string="abcxyabcxyabc"
+    echo "$string" | sed -r 's/[xy]+/1/g'
+
+# archive
 
     tar caf name.tar.gz what_to_archive
 
@@ -391,56 +395,79 @@ will remove duplicated
 
     tar -xf file_name.tar -C /target/directory
     tar -xf file_name.tar.gz --directory /target/directory
+
+## zip to archive files
+
+    zip name_of_archive * 
+
+add `-e` for password protection
+    
     unzip <path to zip file> -d <dest directory>
+    
+## gzip 
 
-# Disk usage:
+    gzip -dr ~/file.gz
+    gzip -c filename > filename.gz or gzip -k filename
+    gzip -r directory
 
-disk space used on a mount level
+# disk usage
+
+## disk space used on a mount level
 
     df -h
 
-disk usage (human readable, only first level of objects) sorted 
+## disk usage (human readable, only first level of objects) sorted 
 
     du / -h -d 1 | sort -h  
 
-# Rename files in directory (replace _ with _)
+# files
+
+## create file (fast)
+
+    touch <filename>
+    
+## rename files in directory (replace _ with _)
 
     for a in $(ls -1 .); do mv $a ${a//_/-}; done
     for f in *\ *; do mv "$f" "${f// /-}"; done
+    
+## add some text to every string in one file and write it to another one
 
-uppercase to lowercase
+    awk '{print "Random text "$0}' foo.txt >> foo1.txt
+    
+## uppercase to lowercase
 
     for f in *.*; do mv "$f" "${f,,}"; done
+    
+# change text in a file:
 
-# Use sed to replace charecters in the string (replaces xy with 1)
+    sudo sed -i 's/search/replace/g' /usr/share/applications/defaults.list 
+    sudo sed -i 's/some\/path\/in\/file\/temp\///g' path/to/file 
 
-    string="abcxyabcxyabc"
-    echo "$string" | sed -r 's/[xy]+/1/g'
+## example of replacing \ with /:
 
-# Create file (fast):
-
-    touch <filename>
-
-# Update locate cache:
+    echo 'C:\foo\bar' | sed 's/\\/\//g'
+    
+# update locate cache:
 
     sudo updatedb
 
-# Anaconda:
+# anaconda:
 
-list of all packages
+## list of all packages
 
     conda list
 
-list of environments
+## list of environments
 
     conda info --envs
 
-activate/deactivate env
+## activate/deactivate env
 
     conda activate <myenv-name>
     conda deactivate
 
-update all packages in the current environment to the latest version
+## update all packages in the current environment to the latest version
 
     conda update --all
 
@@ -450,46 +477,44 @@ update all packages in the current environment to the latest version
     jupyter notebook
     jupyter notebook list
 
-# List usb devices:
+# add user to group
 
-    lsusb
-
-# Add user to group:
-
-add user to some group
+## add user to some group
 
     usermod -a -G examplegroup exampleusername
 
-list of all groups
+## list of all groups
 
     getent group
 
-# VirtualBox:
+# virtualbox
 
     sudo dpkg -i virtualbox-6.1_6.1.22-144080~Ubuntu~eoan_amd64.deb
     sudo VBoxManage extpack install --replace Oracle_VM_VirtualBox_Extension_Pack-6.1.22.vbox-extpack
 
-# SQL Server features install:
+# SQL Server features install
 
-SSIS
+## SSIS
 
     sudo apt-get install mssql-server-is
 
-Full-Text Search
+## Full-Text Search
 
     sudo apt-get install mssql-server-fts
 
-(Server Agent) in 2017
+## (Server Agent) 
+
+### in 2017
 
     sudo apt-get install mssql-server-agent 
 
-in 2019
+### in 2019
 
     sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
 
-# Docker:
+# docker
 
-check state
+## check state
 
     systemctl show --property ActiveState docker
     systemctl show --property ActiveState containerd
@@ -497,33 +522,33 @@ check state
     sudo systemctl status docker
     sudo systemctl status containerd
 
-check available containers
+## check available containers
 
     sudo docker ps -a
 
-start/stop containers
+## start/stop containers
 
     docker start/stop imagename
 
-run a command in a new container
+## run a command in a new container
 
     docker run imagename
 
-to enter a container through terminal
+## to enter a container through terminal
 
     docker exec -it imagename bash
 
-list of data volumes
+## list of data volumes
 
     docker volume ls
 
     docker run -e'ACCEPT_EULA=Y' -e'MSSQL_SA_PASSWORD=Password' --name sqlserverN -d microsoft/mssql-server-linux:2019-latest -v datavolumename:/path/to/dbs
 
-remove image
+## remove image
 
     docker rm imagename
 
-other 
+## other 
 
     sudo docker container ls
     sudo docker images
@@ -532,19 +557,20 @@ other
     sudo docker exec -it mongodb bash
     sudo docker pull mongo:4.0.2
 
-# Change rights:
+# change rights
 
-add execution rights to a file
+## add execution rights to a file
 
     sudo chmod +x concurrent_parallel_2/41_merge_sort.py
 
-change owners
+## change owners
 
     sudo chown -R testuser:testuser /var/www/test/public_html
     sudo setfacl -m "u:mssql:rwx" /var/log
 
-# SWAP 
-## File size change:
+# swap 
+
+## file size change
 
 check current size
    
@@ -566,7 +592,7 @@ turn it ON
 
     swapon /swapfile
 
-## File deletion:
+## file deletion
 
     swapoff -v /swapfile
 
@@ -576,7 +602,7 @@ and remove line about /swapfile
 
     rm -v /swapfile
 
-## Get file back:
+## get file back online
 
     dd if=/dev/zero of=/swapfile bs=1M count=4096
     sudo chmod 600 /swapfile 
@@ -587,77 +613,60 @@ and add line about /swapfile `/swapfile swap swap defaults 0 0`
 
     nano /etc/fstab
 
-# Symbolic link
+# create symbolic link
 
     ln -s /path/to/original /path/to/link
 
-# MongoDB:
+# mongodb
 
     sudo systemctl status mongod
     sudo nano /etc/mongod.conf
     mongo --port 27017  --authenticationDatabase "admin" -u "gofr" -p ''
     mongoimport --db test --collection zips --file ~/Downloads/zips.json --port 27017  -u=gofr -p=password --authenticationDatabase admin
 
-# Mount device:
+# mount device
 
-check for the devices
+## check for the devices
 
     sudo lsblk
 
-create a folder in which we shall mount
+## create a folder in which we shall mount
 
     sudo mkdir /media/TRANSCEND
 
-mount/unmount
+## mount/unmount
 
     sudo mount /sdb1 /media/TRANSCSEND
     sudo umount /media/TRANSCSEND
 
-# Output
-## redirect the output (AKA stdout) to a file:
+# output
+
+## redirect the output (aka `stdout`) to a file
 
     SomeCommand > SomeFile.txt  
 
-## Append:
+## append
 
     SomeCommand >> SomeFile.txt
 
-## If you want stderr as well use this:
+## if you want `stderr` as well use this
 
     SomeCommand &> SomeFile.txt  
 
-## or this to append:
+## or this to append
 
     SomeCommand &>> SomeFile.txt  
 
-## if you want to have both stderr and output displayed on the console and in a file use this:
+## if you want to have both `stderr` and `stdout` displayed on the console and in a file use this
 
     SomeCommand 2>&1 | tee SomeFile.txt
 
-# Change text in a file:
-
-    sudo sed -i 's/search/replace/g' /usr/share/applications/defaults.list 
-    sudo sed -i 's/some\/path\/in\/file\/temp\///g' path/to/file 
-
-Replace \ with /:
-
-    echo 'C:\foo\bar' | sed 's/\\/\//g'
-
-# Check open ports:
-
-    sudo netstat -antup | grep <port>
-    ss -ltn
-
-# Allow connection on particular port:
-
-    sudo ufw allow <port>/tcp
-
-# Thunderbird
+# thunderbird
 
     sudo tar -x thunderbird-X.X.X.tar.bz2
     sudo cp -r ~/Downloads/thunderbird /usr/lib/
 
-# Get audio track from video
+# get audio track from video
 
     ffmpeg -i holaamigo.mov -vn -ac 2 audio.wav
 
@@ -665,12 +674,7 @@ Replace \ with /:
 
     sox -V audio.wav backwards.wav reverse
 
-# Flush DNS
-
-    sudo systemd-resolve --flush-caches
-    sudo /etc/init.d/dns-clean restart
-
-# Copy wallpapers
+# copy wallpapers
 
     sudo mv Downloads/*.jpg /usr/share/backgrounds/
     sudo mv Downloads/*.png /usr/share/backgrounds/
@@ -679,9 +683,9 @@ Replace \ with /:
 
     sudo nano ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
 
-# Colours 
+# colours in terminal for ls
 
-Very simple. Add these three lines to ~/.bashrc
+## add these three lines to ~/.bashrc
 
     nano ~/.bashrc
 
@@ -689,18 +693,18 @@ Very simple. Add these three lines to ~/.bashrc
     eval "$(dircolors -b)"
     alias ls='ls $LS_OPTIONS'
 
-# If you want to apply the changes in a running bash session, run:
+# if you want to apply the changes in a running bash session, run:
 
     source ~/.bashrc
 
-# Python environment
+# python environment
 
     virtualenv -p $(which python3) env-name 
     source /env-name/bin/activate 
     deactivate
     virtualenv env-name 
 
-To change colour of env name in bash, change this string in `activate` file
+## to change colour of env name in bash, change this string in `activate` file
 
     PS1="(`basename \"$VIRTUAL_ENV\"`) ${PS1-}"
 
@@ -708,16 +712,15 @@ to
 
     PS1="\[\e[1;35m\](`basename \"$VIRTUAL_ENV\"`)\[\e[1;35m\] ${PS1-}"
 
-
-# Terminal theme
+# terminal theme
 
     sudo nano ~/.config/xfce4/terminal/terminalrc
 
-here are theme files
+## here are theme files
 
     /usr/share/xfce4/terminal/colorschemes
 
-local path to themes
+## local path to themes
 
     ~/.local/share/xfce4/terminal/colorschemes
     
@@ -754,6 +757,7 @@ Here are some additional tmux pane resizing examples:
 :resize-pane -U (Resizes the current pane upward)  
 :resize-pane -L (Resizes the current pane left)  
 :resize-pane -R (Resizes the current pane right)  
+
 :resize-pane -D 10 (Resizes the current pane down by 10 cells)  
 :resize-pane -U 10 (Resizes the current pane upward by 10 cells)  
 :resize-pane -L 10 (Resizes the current pane left by 10 cells)  
@@ -819,11 +823,11 @@ Here are some additional tmux pane resizing examples:
 
 # conky
 
-autostart file
+## autostart file
 
     sudo nano ~/.config/autostart/conky.desktop
 
-configs
+## configs
 
     sudo nano /etc/conky/conky.conf
 
@@ -876,55 +880,54 @@ autostart files (look at `conky.desktop` for example)
 
     ~/.config/autostart/*.desktop - 
 
-# Date
+# feh
 
-    date
-    date +"%Y-%m-%d"
-    touch $(date +"%Y-%m-%d")
-
-# Feh
-
-open in fullscreen
+## open in fullscreen
 
     feh -F
 
-opens in scaled window
+## opens in scaled window
 
     feh --scale-down
 
-show a list of files
+## show a list of files
 
     feh -l
 
 # Calculate number of files in direcory tree
 
-print all with humanreadable size with level 1 only
+## print all with humanreadable size with level 1 only
 
     tree -ah -L 1
-
     find . -maxdepth 1 -type f | wc -l
 
 # steam
 
     ~/.local/share/Steam/steamapps/common/
 
-# Date & time control
+# date & time control
 
     timedatectl
 
-or `no` to enable/disable auto update
+## or `no` to enable/disable auto update
 
     timedatectl set-ntp yes
 
-or 20:20:20 to set specific date/time
+## or 20:20:20 to set specific date/time
 
     timedatectl set-time 2021-06-14
 
-set timezone
+## set timezone
 
     timedatectl set-timezone Region/Location
     timedatectl list-timezones 
 
+# date
+
+    date
+    date +"%Y-%m-%d"
+    touch $(date +"%Y-%m-%d")
+    
 # How to Change the Start Order of Processes in Linux
 
     cd /etc
@@ -941,23 +944,23 @@ or use
 
     update-rc.d 
 
-# To create custom script
+# create custom script
 
     cd /usr/local/bin
     sudo touch script-name
     sudo chmod +x script-name
 
-to run it
+## to run it
 
     /usr/local/bin/script-name
 
-# Remove duplicates from bash history
+# remove duplicates from bash history
 
 add this string to ~/.bashrc
 
     export HISTCONTROL="ignoreboth:erasedups" 
 
-# Get previous command & arguments
+# get previous command & arguments
 
 ## this will execute last command with sudo
 
@@ -968,23 +971,23 @@ add this string to ~/.bashrc
     rm -rf dir
     cd !$
     
-will give you "-rf"
+will give you `-rf`
 
 ## gets the last element of the previous command line argument
 
     rm -rf dir
     cd !$
 
-will give you "dir"
+will give you `dir`
 
 ## the n'th word from the previous command line
 
     tar xf some-file
     echo !:1 
 
-will give you "xf"
+will give you `xf`
 
-# Push the process to the background 
+# push the process to the background 
 
 add "&" at the end of your command
 
@@ -1000,21 +1003,21 @@ add "&" at the end of your command
 
     bg %1
 
-# Samba network share
+# samba network share
 
-install samba
+## install samba
 
     sudo apt install samba
 
-set password for samba user
+## set password for samba user
 
     sudo smbpasswd -a username
 
-open samba config file
+## open samba config file
 
     sudo nano /etc/samba/smb.conf
 
-and add info about directory you want to share
+## and add info about directory you want to share
 
     [dirname]
     path = /home/username/dirname
@@ -1025,15 +1028,17 @@ Or instead of `valid users` use `guest`
 
     guest ok = yes
 
-then restart samba for changes to take an effect
+## restart samba for changes to take an effect
 
     sudo service smbd restart
 
 # nano show line numbers
 
+## open .nanorc
+
     nano ~/.nanorc
     
-add this line
+## add this line
 
     set linenumbers
 
@@ -1067,4 +1072,3 @@ also consider uncommenting this line in `/etc/nanorc`
     
     sudo apt install cmatrix
     cmatrix
-
