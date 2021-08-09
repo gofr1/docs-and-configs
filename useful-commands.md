@@ -1072,3 +1072,17 @@ also consider uncommenting this line in `/etc/nanorc`
     
     sudo apt install cmatrix
     cmatrix
+
+# show login activity
+
+## the last command displays a list of the most recently logged in users
+
+    last
+
+## lastb command displays a list of bad (failed) logins
+
+    lastb
+
+## who report which users are logged in to the system
+
+    who
