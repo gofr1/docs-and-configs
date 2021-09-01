@@ -1105,3 +1105,8 @@ also consider uncommenting this line in `/etc/nanorc`
     read name
     echo "Welcome $name"
 
+## with loop
+
+    for i in {1..50}; do echo $i; done
+    for i in {1..99..2}; do echo $i; done
+
