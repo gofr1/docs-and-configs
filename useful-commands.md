@@ -1110,3 +1110,31 @@ also consider uncommenting this line in `/etc/nanorc`
     for i in {1..50}; do echo $i; done
     for i in {1..99..2}; do echo $i; done
 
+## comparing numbers
+
+    read x
+    read y 
+    
+    if [ $x -gt $y ]
+    then
+      echo "X is greater than Y"
+    elif [ $x -eq $y ]
+    then
+      echo "X is equal to Y"
+    else 
+      echo "X is less than Y"
+    fi
+
+## comparing text
+
+    read x 
+    
+    if [ $x == "y" ] || [ $x == "Y" ]
+    then
+       echo "YES"
+    elif [ $x == "n" ] || [ $x == "N" ]
+    then
+       echo "NO"
+    else 
+       echo ""
+    fi
