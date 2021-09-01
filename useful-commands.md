@@ -1086,3 +1086,22 @@ also consider uncommenting this line in `/etc/nanorc`
 ## who report which users are logged in to the system
 
     who
+
+# bash script 
+
+## with input
+
+    read x
+    read y
+    
+    if [ $y != 0 ]
+    then
+      echo "$(($x+$y))" 
+      echo "$(($x-$y))"
+      echo "$(($x*$y))"
+      printf "%d\n" "$(($x/$y))"
+    fi
+    
+    read name
+    echo "Welcome $name"
+
