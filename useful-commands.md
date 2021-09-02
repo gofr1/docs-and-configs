@@ -1138,3 +1138,7 @@ also consider uncommenting this line in `/etc/nanorc`
     else 
        echo ""
     fi
+
+# get cover art from mp3
+
+    ffmpeg -i file.mp3 file.jpg
