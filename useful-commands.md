@@ -901,6 +901,10 @@ autostart files (look at `conky.desktop` for example)
     tree -ah -L 1
     find . -maxdepth 1 -type f | wc -l
 
+# find a file in directory with wildcard
+
+    find /path/to/file/ -iname filename*
+
 # steam
 
     ~/.local/share/Steam/steamapps/common/
