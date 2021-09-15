@@ -1146,3 +1146,7 @@ also consider uncommenting this line in `/etc/nanorc`
 # get cover art from mp3
 
     ffmpeg -i file.mp3 file.jpg
+
+# check hdd/ssd for badblocks
+
+    badblocks -sv /dev/sda
