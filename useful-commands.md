@@ -1150,3 +1150,7 @@ also consider uncommenting this line in `/etc/nanorc`
 # check hdd/ssd for badblocks
 
     badblocks -sv /dev/sda
+
+# check web-cam
+
+    ffplay /dev/video0
