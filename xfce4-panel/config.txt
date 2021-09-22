@@ -1,5 +1,5 @@
 /configver 2
-/panels [<1>]
+/panels [<1>, <2>]
 /panels/dark-mode false
 /panels/panel-1/autohide-behavior uint32 0
 /panels/panel-1/background-rgba [<0.0>, <0.0>, <0.0>, <1.0>]
@@ -12,11 +12,16 @@
 /panels/panel-1/length-adjust false
 /panels/panel-1/mode uint32 0
 /panels/panel-1/nrows uint32 1
-/panels/panel-1/plugin-ids [<17>, <2>, <5>, <3>, <4>, <6>, <29>, <31>, <7>, <12>, <1>, <8>]
-/panels/panel-1/position 'p=12;x=947;y=1055'
+/panels/panel-1/plugin-ids [<17>, <3>, <4>, <6>, <29>, <31>, <7>, <12>, <1>, <8>]
+/panels/panel-1/position 'p=6;x=960;y=17'
 /panels/panel-1/position-locked true
-/panels/panel-1/size uint32 30
+/panels/panel-1/size uint32 32
 /panels/panel-1/span-monitors false
+/panels/panel-2/disable-struts true
+/panels/panel-2/plugin-ids [<2>]
+/panels/panel-2/position 'p=10;x=965;y=1051'
+/panels/panel-2/position-locked true
+/panels/panel-2/size uint32 48
 /plugins/plugin-1 'thunar-tpa'
 /plugins/plugin-12 'clock'
 /plugins/plugin-12/digital-format '%a %_d %b, %R'
@@ -24,9 +29,7 @@
 /plugins/plugin-12/mode uint32 2
 /plugins/plugin-12/tooltip-format '%Y-%m-%d'
 /plugins/plugin-17 'whiskermenu'
-/plugins/plugin-2 'separator'
-/plugins/plugin-2/expand false
-/plugins/plugin-2/style uint32 0
+/plugins/plugin-2 'docklike'
 /plugins/plugin-29 'pulseaudio'
 /plugins/plugin-29/enable-keyboard-shortcuts true
 /plugins/plugin-29/enable-mpris true
@@ -47,7 +50,6 @@
 /plugins/plugin-4/numbering false
 /plugins/plugin-4/rows uint32 1
 /plugins/plugin-4/workspace-scrolling true
-/plugins/plugin-5 'docklike'
 /plugins/plugin-6 'systray'
 /plugins/plugin-6/hidden-legacy-items @av []
 /plugins/plugin-6/hide-new-items false
