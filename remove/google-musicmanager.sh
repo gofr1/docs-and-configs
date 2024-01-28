@@ -1,3 +1,4 @@
+#!/bin/bash
 rm -rf /etc/apt/sources.list.d/google-musicmanager.list
 rm -rf /etc/apt/sources.list.d/google-musicmanager.list.save
 rm -rf /etc/cron.daily/google-musicmanager
