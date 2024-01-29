@@ -7,4 +7,4 @@ secondary_display=$(xrandr | grep " con" | grep -v "primary" |  awk -F'[ ]' '{pr
 echo $primary_display
 echo $secondary_display
 
-xrandr --output $primary_display --auto --output $secondary_display --right-of $primary_display --auto
+xrandr --output "$primary_display" --auto --output "$secondary_display" --right-of "$primary_display" --auto
