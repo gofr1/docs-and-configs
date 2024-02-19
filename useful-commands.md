@@ -827,6 +827,15 @@ Here are some additional tmux pane resizing examples:
 
     sudo nano ~/.config/autostart/conky.desktop
 
+Content of the file:  
+
+    [Desktop Entry]
+    Type=Application
+    Name=conky
+    Exec=conky --daemonize --pause=5
+    StartupNotify=false
+    Terminal=false
+
 ## configs
 
     sudo nano /etc/conky/conky.conf
