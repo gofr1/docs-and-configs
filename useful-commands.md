@@ -1045,17 +1045,33 @@ Or instead of `valid users` use `guest`
 
     sudo service smbd restart
 
-# nano show line numbers
+# nano
 
-## open .nanorc
+## Show linenumbers and cursor position
+
+open `.nanorc`
 
     nano ~/.nanorc
     
-## add this line
+add these lines
 
     set linenumbers
+    set constantshow
 
-also consider uncommenting this line in `/etc/nanorc`
+consider uncommenting this line in `/etc/nanorc`  
+also, you can use `c` `--constantshow` and `l` `--linenumbers` flags when launching nano  
+
+    nano -cl filename
+
+## Some hotkeys
+
+`Ctrl+6` - [Mark Set] use arrows or PgUp/PgDown, Home/End to select a part of text  
+`Alt+6` - Copy selected text or a whole row  
+`Ctrl+K` - **K**ut selection or a whole row  
+`Ctrl+U` - Paste string (**U**n**k**ut)   
+`Alt+3` - Comment/Uncomment line  
+`Esc+Shift+3` - show linenumbers on the left  
+`Ctrl+C` - Show current cursor position on the bottom  
 
 # nvidia drivers
 
@@ -1077,9 +1093,15 @@ also consider uncommenting this line in `/etc/nanorc`
 
     lsmod | grep nvidia
 
-## automatically install drivers
+## install drivers
+
+manual:  
     
-    sudo ubuntu-drivers install nvidia-driver-470
+    sudo ubuntu-drivers install nvidia-driver-535
+
+install recommended driver automatically:  
+
+    sudo ubuntu-drivers install
 
 # matrix in terminal
     
