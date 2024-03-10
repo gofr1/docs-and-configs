@@ -45,7 +45,4 @@ fi
 export GTK_MODULES
 export UBUNTU_MENUPROXY
 
-# remove duplicates from bash history
-export HISTCONTROL="ignoreboth:erasedups"
-
 alias archey="python3 -m archey"
