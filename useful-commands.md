@@ -108,6 +108,7 @@ change in `LC_TIME` `first_weekday 1` to `first_weekday 2`
 ## list all
     
     dpkg -l
+    dpkg --get-selections
 
 ## show info
 
@@ -117,6 +118,7 @@ change in `LC_TIME` `first_weekday 1` to `first_weekday 2`
 
     sudo dpkg -P package-name
     sudo dpkg -r package-name
+    sudo dpkg --remove package-name
 
 # clean/update/upgrade:
 
