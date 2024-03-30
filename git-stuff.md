@@ -67,4 +67,11 @@ Switch to another branch and commit there
     git remote set-url origin git@github.com:User/project-name.git
     git remote -v 
 
+# Show log
 
+    git log -10 --graph --oneline --decorate
+
+# Show all branches
+
+    git branch -a
+    git branch --all
