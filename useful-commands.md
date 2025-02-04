@@ -494,6 +494,16 @@ add `-e` for password protection
     sudo dpkg -i virtualbox-6.1_6.1.22-144080~Ubuntu~eoan_amd64.deb
     sudo VBoxManage extpack install --replace Oracle_VM_VirtualBox_Extension_Pack-6.1.22.vbox-extpack
 
+## update to a new version
+
+### check what's installed
+
+    dpkg -l | grep virtualbox
+
+### remove old version (see previous command)
+
+    sudo dpkg -r virtualbox-7.0
+
 # SQL Server features install
 
 ## SSIS
