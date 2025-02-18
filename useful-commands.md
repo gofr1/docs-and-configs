@@ -1197,3 +1197,13 @@ install recommended driver automatically:
 # check web-cam
 
     ffplay /dev/video0
+
+# mpv
+
+## Launch file with particular audio/sub
+
+    mpv filename.mkv --aid=3 --sid=6
+
+## Launch file with external audio/subs
+
+    mpv file.mkv --audio-file=track-path.mka --sub-file=subs-path.ass 
