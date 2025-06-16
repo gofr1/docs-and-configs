@@ -1207,3 +1207,17 @@ install recommended driver automatically:
 ## Launch file with external audio/subs
 
     mpv file.mkv --audio-file=track-path.mka --sub-file=subs-path.ass 
+
+# snap
+
+## List packages
+
+    snap list --all
+
+## Remove old versions manually
+
+    sudo snap remove --revision rev-num package
+
+## Completely purge/remove package
+
+    sudo snap remove --purge firefox
