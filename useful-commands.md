@@ -1221,3 +1221,9 @@ install recommended driver automatically:
 ## Completely purge/remove package
 
     sudo snap remove --purge firefox
+
+# Mouse Cursor set default one
+
+## Open the default/index icon theme file and specify the folder of cursor you want to use as default
+
+    sudo nano /usr/share/icons/default/index.theme
