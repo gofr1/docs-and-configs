@@ -504,6 +504,20 @@ add `-e` for password protection
 
     sudo dpkg -r virtualbox-7.0
 
+## change VDI file size
+
+### check info
+
+    vboxmanage showhdinfo /home/user/VirtualBoxVMs/oldfilename.vdi
+
+### if Format variant: fixed default clone it using
+
+    vboxmanage clonehd /home/user/VirtualBoxVMs/oldfilename.vdi /home/user/VirtualBoxVMs/newfilename.vdi
+
+### then resize
+
+    vboxmanage modifyhd /home/user/VirtualBoxVMs/newfilename.vdi --resize NewSize in MB
+
 # SQL Server features install
 
 ## SSIS
