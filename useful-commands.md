@@ -1241,3 +1241,9 @@ install recommended driver automatically:
 ## Open the default/index icon theme file and specify the folder of cursor you want to use as default
 
     sudo nano /usr/share/icons/default/index.theme
+
+# Steam Deck video recording to mp4
+
+    cat init-stream0.m4s $(find . -name "chunk-stream0-*.m4s" | sort) > tmp_video.mp4
+    cat init-stream1.m4s $(find . -name "chunk-stream1-*.m4s" | sort) > tmp_audio.mp4
+    ffmpeg -i tmp_video.mp4 -i tmp_audio.mp4 -c copy final_video.mp4
